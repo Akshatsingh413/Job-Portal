@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux'
 import useGetAppliedJobs from '@/hooks/useGetAppliedJobs'
 
 // const skills = ["Html", "Css", "Javascript", "Reactjs"]
-const isResume = true;
+const isResume = user?.profile?.resume;
 
 const Profile = () => {
     useGetAppliedJobs();
