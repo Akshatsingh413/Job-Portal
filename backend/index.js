@@ -16,14 +16,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
-const corsOptions = {
-  origin: [                    
-    'https://job-portal-frontend-vauv.onrender.com',
-  ],
-  credentials: true
-};
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: 'https://job-portal-frontend-vauv.onrender.com',
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 
 const PORT = process.env.PORT || 8000;
 
