@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 
 app.use(cors({
-  origin: 'https://job-portal-frontend-vauv.onrender.com',
+  origin: 'https://job-portal-h187.onrender.com',
   credentials: true,
 }));
 
