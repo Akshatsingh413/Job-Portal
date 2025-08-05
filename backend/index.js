@@ -11,6 +11,7 @@ import applicationRoute from "./routes/application.route.js";
 dotenv.config({});
 
 const app = express();
+const cors = require("cors");
 
 // middleware
 app.use(express.json());
