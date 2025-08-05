@@ -34,6 +34,15 @@ const Signup = () => {
     }
     const submitHandler = async (e) => {
         e.preventDefault();
+
+        if (!input.fullname || !input.email || !input.phoneNumber || !input.password || !input.role) {
+            toast.error("All fields are required");
+            return;
+        }
+        if (!input.file) {
+            toast.error("Please upload a profile image");
+            return;
+        }
         const formData = new FormData();    //formdata object
         formData.append("fullname", input.fullname);
         formData.append("email", input.email);
