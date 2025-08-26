@@ -41,7 +41,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
         formData.append("phoneNumber", input.phoneNumber);
         formData.append("bio", input.bio);
         formData.append("skills", input.skills);
-        if (input.file instanceof File) {
+        if (input.file) {
             formData.append("file", input.file);
         }
         try {
